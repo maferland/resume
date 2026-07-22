@@ -9,12 +9,16 @@
 \titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
 \setlist[itemize]{noitemsep, topsep=2pt, leftmargin=*}
 
+% Avoid line-break hyphens splitting words (ATS text extraction)
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
 \begin{document}
 
 %==================== HEADER ====================
 \begin{center}
     {\LARGE \textbf{Marc-Antoine Ferland}} \\
-    Staff Frontend Engineer \\
+    Senior Software Engineer $\cdot$ AI Developer Tooling \& Platform \\
     Quebec City, Canada \\
     \href{mailto:me@maferland.com}{me@maferland.com} \quad
     \href{https://github.com/maferland}{github.com/maferland} \quad
@@ -23,18 +27,25 @@
 
 %==================== PROFILE ====================
 \section*{Profile}
-Staff Frontend Engineer focused on delivering measurable product impact through modern frontend systems and strong cross-functional alignment. While frontend is my core strength, I operate comfortably across the stack when needed and prioritize outcomes over strict role boundaries.
+Engineer with 10+ years building web products, now building AI-native developer tooling at Carta: an LLM-evaluation framework and MCP platform architecture other teams build on. Frontend and developer experience are my craft. Most recently I taught engineers across the org to adopt AI coding agents. Deep in TypeScript and React.
+
+%==================== SKILLS ====================
+\section*{Skills}
+\textbf{AI \& Agents:} LLM-Powered Coding Agents, Agentic Workflows, MCP, LLM Evaluation \& Regression Testing \\
+\textbf{Frontend:} TypeScript, React, Component Architecture, State Management \& Data Fetching, Performance Optimization, Testing (Jest, Storybook, Playwright)
 
 %==================== EXPERIENCE ====================
 \section*{Experience}
 
 \textbf{Carta} \hfill Dec 2023--Present\\
-\textit{Senior Frontend Engineer}
+\textit{Senior Software Engineer II}
 \begin{itemize}
-    \item Improved frontend data-fetching architecture with structured caching and better developer experience.
-    \item Wrote RFCs modernizing UI infrastructure toward a maintainable component platform.
-    \item Delivered equity automation workflows expanding HRIS product capabilities.
-    \item Partnered with product and design on filtering, saved views, and workflow improvements.
+    \item Created and lead Verdict, an LLM-evaluation and regression-testing framework for AI agent behavior, adopted by four teams with 74 plugin test suites written against it; it caught four regressions before merge in a single refactor sweep, and Carta's CEO reviewed it personally.
+    \item Authored the domain-registry architecture (domain:verb:noun with a discover/fetch gateway) that every Carta MCP tool now follows, publicly credited by the MCP tech lead; built the BM25 tool-search gateway and the platform's core architecture decision records.
+    \item Built perf, an internal toolkit that audits carta-web through Datadog APM and auto-opens draft PRs with N+1 query fixes, driving 30 tracked performance fixes across the team.
+    \item Led recurring vibe-coding sessions teaching engineers across multiple teams and directors' orgs to adopt AI coding agents, and presented Verdict and the MCP platform to senior leadership including the CEO and a VP of Engineering.
+    \item Delivered Carta's International Securities filings end to end: HMRC (UK) and ATO (Australia) equity-scheme reporting, including an LLM autofill pipeline for fillable government document templates.
+    \item Led a 3.5-month migration off a legacy data-fetching hook to a react-query pattern across 15 PRs, now used in 224 files and maintained by nine other engineers.
 \end{itemize}
 
 \textbf{Tola} \hfill Jul 2022--Dec 2023\\
@@ -64,27 +75,11 @@ Staff Frontend Engineer focused on delivering measurable product impact through 
 \end{itemize}
 
 \textbf{Cortex} \hfill Apr 2017--Jul 2018\\
-\textit{Full Stack Developer}
-\begin{itemize}
-    \item Delivered full-stack features across web, mobile, and chatbot platforms.
-    \item Collaborated closely with product and design stakeholders.
-\end{itemize}
+\textit{Full Stack Developer} \\
+Delivered full-stack features across web, mobile, and chatbot platforms.
 
 \textbf{Coveo} \hfill Jun 2015--Apr 2017\\
-\textit{Backend Developer}
-\begin{itemize}
-    \item Built cloud microservices supporting enterprise search workloads.
-    \item Worked on distributed AWS infrastructure at scale.
-\end{itemize}
-
-%==================== STRENGTHS ====================
-\section*{Core Strengths}
-\begin{itemize}
-    \item Frontend architecture and migrations
-    \item Design systems and developer experience
-    \item Product-focused engineering leadership
-    \item Performance and scalability
-    \item Cross-functional collaboration
-\end{itemize}
+\textit{Backend Developer} \\
+Built cloud microservices on AWS supporting enterprise search workloads at scale.
 
 \end{document}

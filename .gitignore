@@ -1,1 +1,6 @@
 resume.pdf
+.agents/
+.claude/
+.DS_Store
+.worktrees/
+skills-lock.json
